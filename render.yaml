@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bjj-clip-library-api
+    env: python
+    rootDir: deploy_web/backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn web_api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
