@@ -1,0 +1,67 @@
+# --- Secrets / local config ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# --- Node / frontend ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Frontend build artifacts
+BJJ Clip Library UI Design/node_modules/
+BJJ Clip Library UI Design/dist/
+
+# --- IDE / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Local databases / logs / reports ---
+*.db
+*.sqlite
+*.sqlite3
+*.log
+batch_pipeline_report_*.json
+
+# --- Local media/data artifacts (kept in Supabase, not git) ---
+video/
+clips/
+audio/
+transcript/
+
+# yt-dlp / ffmpeg partials and temp artifacts
+*.part
+*.ytdl
+*.temp
+*.tmp
